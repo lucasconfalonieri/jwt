@@ -22,9 +22,9 @@ app.post("/api/auth", (req, res) => {
         password: "omed"
     }
 
-    jwt.sign({usuario: usuario}, 'secretKey',(err, token)=>{
+    jwt.sign({usuario}, 'secretKey',(err, token)=>{
         res.json({
-            token: token
+            token
         })
     })
 })
